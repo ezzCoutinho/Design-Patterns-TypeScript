@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import { useInterval } from '../hooks/use-interval';
 import { Button } from './button';
 import { Timer } from './timer';
@@ -20,46 +20,63 @@ interface Props {
 }
 
 export function PomodoroTimer(props: Props): JSX.Element {
-  const [mainTime, setMainTime] = React.useState(props.pomodoroTime);
-  const [timeCounting, setTimeCounting] = React.useState(false);
-  const [working, setWorking] = React.useState(false);
-  const [resting, setResting] = React.useState(false);
-  const [cyclesQdtManager, setCyclesQdtManager] = React.useState(
+  const [mainTime, setMainTime] = useState(props.pomodoroTime);
+  const [timeCounting, setTimeCounting] = useState(false);
+  const [working, setWorking] = useState(false);
+  const [resting, setResting] = useState(false);
+  const [cyclesQdtManager, setCyclesQdtManager] = useState(
     new Array(props.cycles - 1).fill(true),
   );
 
-  const [completedCycles, setCompletedCycles] = React.useState(0);
-  const [fullWorkingTime, setFullWorkingTime] = React.useState(0);
-  const [numberOfPomodoros, setNumberOfPomodoros] = React.useState(0);
+  const [completedCycles, setCompletedCycles] = useState(0);
+  const [fullWorkingTime, setFullWorkingTime] = useState(0);
+  const [numberOfPomodoros, setNumberOfPomodoros] = useState(0);
 
   useInterval(
     () => {
       setMainTime(mainTime - 1);
+      if (working) setFullWorkingTime(fullWorkingTime + 1);
     },
     timeCounting ? 1000 : null,
   );
 
-  const configureWork = () => {
+  const configureWork = useCallback(() => {
     setTimeCounting(true);
     setWorking(true);
     setResting(false);
     setMainTime(props.pomodoroTime);
     audioStartWorking.play();
-  };
+  }, [
+    setTimeCounting,
+    setWorking,
+    setResting,
+    setMainTime,
+    props.pomodoroTime,
+  ]);
 
-  const configureRest = (long: boolean) => {
-    setTimeCounting(true);
-    setWorking(false);
-    setResting(true);
+  const configureRest = useCallback(
+    (long: boolean) => {
+      setTimeCounting(true);
+      setWorking(false);
+      setResting(true);
 
-    if (long) {
-      setMainTime(props.longRestTime);
-    } else {
-      setMainTime(props.shortRestTime);
-    }
+      if (long) {
+        setMainTime(props.longRestTime);
+      } else {
+        setMainTime(props.shortRestTime);
+      }
 
-    audioStopWorking.play();
-  };
+      audioStopWorking.play();
+    },
+    [
+      setTimeCounting,
+      setWorking,
+      setResting,
+      setMainTime,
+      props.longRestTime,
+      props.shortRestTime,
+    ],
+  );
 
   useEffect(() => {
     if (working) document.body.classList.add('working');
@@ -99,7 +116,7 @@ export function PomodoroTimer(props: Props): JSX.Element {
 
   return (
     <div className="pomodoro">
-      <h2>You are: working</h2>
+      <h2>You are: {working ? 'working' : 'resting'}</h2>
       <Timer mainTime={mainTime}></Timer>
       <div className="controls">
         <Button text="Work" onClick={() => configureWork()}></Button>
