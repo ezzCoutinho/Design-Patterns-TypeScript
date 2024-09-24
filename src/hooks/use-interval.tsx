@@ -1,3 +1,5 @@
+// Fazemos um constraints em use.
+// SetTimeInterval em typeScript
 import { useEffect, useRef } from 'react';
 
 export function useInterval<C extends CallableFunction>(
