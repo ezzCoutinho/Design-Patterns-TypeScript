@@ -1,0 +1,17 @@
+-> Trata da criação de objetos complexos.
+-> Permite a criação de um objeto em etapas.
+-> Permite method chaining (chamar um método dentro de um método).
+-> O objeto final pode variar de acordo com a necessidade.
+-> É um padrão complexo.
+-> Builder pode ser abstrata ou uma interface/type.
+-> Execução em cadeia.
+
+
+Benefícios 
+-> Separa criação de utilização.
+-> O cliente não precisa criar objetos diretamente.
+-> O mesmo código pode construir objetos diferentes.
+-> Ajuda na aplicação dos princípios SRP and OCP.
+
+Maleficio
+-> O código final pode se tornar muito complexo.   
