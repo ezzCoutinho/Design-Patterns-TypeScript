@@ -1,0 +1,16 @@
+-> Factory cria um objeto.
+-> Oculta a lógica de instanciação do código cliente. O método fábrica será 
+responsável por instanciar as classes desejadas.
+-> É obtido através de herança.
+-> Dá flexibilidade ao código (OCP).
+-> Pode usar parâmetros para determinar tipos.
+-> Faça um hook às subclasses para permitir que ela decidam a lógica de criação
+de objetos.
+-> Evite duplicação de código.
+
+Benefícios 
+-> Ajuda aplicação do Single Responsibility Principle.
+-> Ajuda no desacoplamento do seu código.
+
+Malefícios 
+-> Se usado sem necessidade pode causar, uma explosão de subclasses.
