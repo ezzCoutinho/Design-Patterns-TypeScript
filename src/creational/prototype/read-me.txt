@@ -1,0 +1,17 @@
+-> JS/TS são linguagens baseadas em protótipos.
+-> Object.Prototype.
+-> Motor do Javascript, Prototype não são heranças, mas sim cópias.
+-> Usa funções construtoras.
+-> Evita recriação de objetos "Caros"
+-> Evita explosão de subclasses 
+-> Clona o método dentro do objeto protótipo
+-> o método clone pode gerar uma copia rasa | profunda
+-> Evita que o cliente conheça as classes que criam os objetos 
+
+Benefícios 
+-> Oculta classes concretas do código cliente
+-> Ajuda na criação de objetos caros ou complexos 
+-> Evita a explosão de subclasses
+
+Malefícios 
+-> Clonar objetos que tem referências para outros objetos pode ser super complexo
