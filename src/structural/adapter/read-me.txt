@@ -1,0 +1,25 @@
+-> Converter a interface de uma classe em outra interface esperada pelos 
+clientes.
+-> Adapter permite que certas classes trabalhem em conjunto, pois de outra
+forma seria impossível por causa de suas interfaces incompatíveis.
+-> Faz exatamente o que um adaptador da vida real faz (pense em um adaptador
+de tomadas de um formato para outro).
+-> É muito usado para definir limites dentro de camada da aplicação.
+-> Também pode ser usado para adaptar interfaces de códigos legado para um novo
+código.
+-> Tem duas estruturas:
+>> Composição;
+>> Herança;
+-> Se você não quiser que seu código dependa diretamente de código de terceiros
+ou legado.
+
+Benefícios;
+
+-> Desacopla o código da aplicação de códigos de terceiros.
+-> Aplica SRP ao separar a conversão de interfaces da lógica da aplicação.
+-> Aplica o OCP ao permitir introduzir novo Adapter para o código.
+
+Malefícios; 
+
+-> Aumenta a complexidade da aplicação (Por outro lado, qual outra solução 
+deveria ser aplicada?).
