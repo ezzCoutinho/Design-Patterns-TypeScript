@@ -4,9 +4,9 @@ responsável por instanciar as classes desejadas.
 -> É obtido através de herança.
 -> Dá flexibilidade ao código (OCP).
 -> Pode usar parâmetros para determinar tipos.
--> Faça um hook às subclasses para permitir que ela decidam a lógica de criação
+-> Faz um hook às subclasses para permitir que elas decidam a lógica de criação
 de objetos.
--> Evite duplicação de código.
+-> Evite duplicação de código(podendo ser usado para execução na área do usuário).
 
 Benefícios 
 -> Ajuda aplicação do Single Responsibility Principle.

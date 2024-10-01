@@ -1,11 +1,11 @@
 Singleton -> 
 Tem apenas uma instanciamento da sua classe, pode ser exportada.
 Não segue o principio da responsabilidade única.
-Pode ser usada como variavel global.
-Pode ser utilizadas em modulos, tendo 3 tipos:
+Pode ser usada como variável global.
+Pode ser utilizadas em módulos, tendo 3 tipos:
 - class;
 - function;
-- objeto;
+- objeto literais;
 
 # Singleton - Creational (Criação)
 

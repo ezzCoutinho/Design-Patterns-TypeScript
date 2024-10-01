@@ -14,4 +14,4 @@ Benefícios
 -> Evita a explosão de subclasses.
 
 Malefícios 
--> Clonar objetos que tem referências para outros objetos pode ser super complexo.
+-> Clonar objetos que tem referências para outros objetos podem ser super complexo.

@@ -3,7 +3,6 @@
 -> Permite method chaining (chamar um método dentro de um método).
 -> O objeto final pode variar de acordo com a necessidade.
 -> É um padrão complexo.
--> Builder pode ser abstrata ou uma interface/type.
 -> Execução em cadeia.
 
 
