@@ -1,0 +1,25 @@
+-> Compor objetos em estruturas de árvore para representar hierarquias partes/
+todo. 
+-> Composite permite aos clientes tratarem de maneira uniforme objetos
+individuais e composições de objetos.
+-> Faz mais sentido em estruturas que podem ser tratadas hierarquicamente 
+(como árvores).
+>> Composite são nós internos e leaf são nós externos(faz a execução).
+-> Prioriza composição ao invés de herança(Pode ser um fardo de leite, ou o 
+leite a unidade dentro do fardo).
+-> Trata uma estrutura como estrutura ou trata um produto como produto(Composite).
+-> Você quiser que o código cliente trate objetos compostos e objetos simples
+da mesma maneira.
+
+Benefícios; 
+
+-> É muito fácil criar objetos complexos por composição.
+-> É fácil gerar uma hierarquia de objetos.
+-> É fácil usar polimorfismo e recursão.
+-> É fácil adicionar novos tipos de elementos na estrutura(OCP).
+
+Malefícios;
+
+-> Dependendo da estrutura, pode quebrar o princípio da segregação de interface
+(ISP). Objetos do tipo "Leaf"(folha) tendem a ter métodos que não usam ou não 
+fazem nada.
