@@ -27,7 +27,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@types/validator": "^13.12.1",
+    "@types/validator": "^13.12.2",
     "lodash": "^4.17.21",
     "validator": "^13.12.0"
   }

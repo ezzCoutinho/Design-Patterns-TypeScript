@@ -8,7 +8,7 @@ individuais e composições de objetos.
 -> Prioriza composição ao invés de herança(Pode ser um fardo de leite, ou o 
 leite a unidade dentro do fardo).
 -> Trata uma estrutura como estrutura ou trata um produto como produto(Composite).
--> Você quiser que o código cliente trate objetos compostos e objetos simples
+-> Se você quiser que o código cliente trate objetos compostos e objetos simples
 da mesma maneira.
 
 Benefícios; 

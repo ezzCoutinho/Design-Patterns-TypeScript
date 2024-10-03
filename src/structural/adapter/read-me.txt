@@ -12,6 +12,7 @@ código.
 >> Herança;
 -> Se você não quiser que seu código dependa diretamente de código de terceiros
 ou legado.
+-> Gerencia um frameWork.
 
 Benefícios;
 
