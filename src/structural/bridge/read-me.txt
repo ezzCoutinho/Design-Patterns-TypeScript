@@ -1,0 +1,22 @@
+-> Semelhante ao adapter.
+-> Adapter faz as coisas funcionarem APOS ELAS TEREM SIDO PROJETADAS. Já o
+Bridge as faz funcionar ANTES QUE EXISTEM...
+-> Bridge é um padrão de projeto estrutural que tem a intenção de desacoplar
+uma abstração(alto nível) da sua implementação(baixo nível), de modo que as 
+duas possam varia e evoluir independentemente.
+-> Composição é melhor que hierarquia.
+
+-> Usa se sua estrutura terá abstrações e implementações.
+-> Se você souber que o Adapter poderia ser aplicado na estrutura.
+-> Se você quiser dividir uma classe que possa ter diversas variantes.
+-> Se você quer trocas as implementações em tempo de execução.
+
+Benefícios;
+
+-> Desacopla (SRP);
+-> Implementa (OCP), ao permitir novas abstrações e/ou implementações para o
+código existente
+
+Malefícios;
+
+-> Aumenta a complexidade da aplicação quando implementado em locais incorretos
