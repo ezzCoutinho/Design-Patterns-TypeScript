@@ -13,10 +13,10 @@ duas possam varia e evoluir independentemente.
 
 Benefícios;
 
--> Desacopla (SRP);
+-> Desacopla (SRP).
 -> Implementa (OCP), ao permitir novas abstrações e/ou implementações para o
-código existente
+código existente.
 
 Malefícios;
 
--> Aumenta a complexidade da aplicação quando implementado em locais incorretos
+-> Aumenta a complexidade da aplicação quando implementado em locais incorretos.
