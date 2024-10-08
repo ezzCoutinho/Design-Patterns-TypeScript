@@ -1,0 +1,29 @@
+-> Agregar responsabilidades adicionais a um objeto dinamicamente. Os 
+decorators fornecem uma alternativa flexível ao uso de subclasses para 
+extensão de funcionalidades.
+-> Usa a composição ao invés da herança (parecido com o Composite).
+-> É usado para adicionar funcionalidades a objetos em tempo de execução.
+-> Finge ser o objeto  sendo decorado, porém repassa chamadas de métodos para
+o mesmo.
+-> Pode executar ações antes e depois da chamadas do métodos do objeto 
+decorado.
+-> Pode manipular dados antes do retorno. 
+
+-> Se você precisar adicionar funcionalidades em objetos sem quebrar ou alterar
+o código existente.
+-> Se você quiser usar composição ao invés de herança (recomendado GoF).
+-> Se você perceber que pode ocorrer uma explosão de subclasses em determinada
+estrutura.
+
+Benefícios;
+
+-> Composição é sempre melhor que herança.
+-> É fácil adicionar ou remover comportamento de objetos sem tocar em código
+já escritos (OCP).
+-> É possível decorar um objeto já decorado, adicionando ainda mais 
+funcionalidades(camadas).
+
+
+Malefícios;
+
+-> Quanto mais decorators em camadas, mais complexo seu código se torna.
