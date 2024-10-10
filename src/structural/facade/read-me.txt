@@ -1,0 +1,26 @@
+-> Façade é um padrão de projeto estrutural que tem a intenção de fornecer uma 
+interface em um subsistema. Façade define uma interface de nível mais alto que
+torna o subsistema mais fácil de ser usado.
+-> É importante ressaltar que o Façade não tem a intenção de ocultar nada do 
+código cliente, a ideia é simplesmente facilitar o uso do sistema. O cliente
+ainda poderá usar os objetos do sistema diretamente se necessário.
+- Se tivermos uma GodClass, podemos usar uma outra fachada, assim uma fachada, 
+usa a outra.
+
+-> Você quer disponibilizar uma interface mais simples para um sistema
+complexo.
+-> Você quer criar pontos de entrada para determinadas partes do sistema, como
+serviços externos, camadas da aplicação e objetos complexos dentro em 
+determinadas partes do código.
+
+
+Benefícios;
+
+-> Isola o código complexo do código cliente.
+-> Facilita o uso do sistema.
+-> Cria pontos de entrada para camadas da aplicação e serviços de terceiros.
+
+Malefícios;
+
+-> O objeto façade se torna facilmente uma "*GodClass*" (use fachadas
+adicionais se perceber que isso está ocorrendo no seu código).

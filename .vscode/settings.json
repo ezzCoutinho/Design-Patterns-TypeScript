@@ -5,4 +5,7 @@
     "typescript": "clear && npx ts-node --files --transpile-only",
     
   },
+  "cSpell.words": [
+    "façade"
+  ],
 }
