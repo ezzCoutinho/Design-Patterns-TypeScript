@@ -1,11 +1,7 @@
 {
-  "editor.fontSize": 14,
+
+  "editor.fontSize": 16,
   "window.zoomLevel": 0,
-  "code-runner.clearPreviousOutput": true,
-  "code-runner.executorMap": {
-    "javascript": "node",
-    "typescript": "npx ts-node --files --transpileOnly ",
-  },
   "cSpell.words": [
     "creational",
     "ecommerce",
