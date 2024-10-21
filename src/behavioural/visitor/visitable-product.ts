@@ -1,3 +1,5 @@
+import { TaxVisitorProtocol } from './tax-visitor-protocol';
+
 export abstract class VisitableProduct {
   constructor(
     protected name: string,
@@ -11,4 +13,6 @@ export abstract class VisitableProduct {
   getPrice(): number {
     return this.price;
   }
+
+  abstract getPriceWithTaxes(visitor: TaxVisitorProtocol): number;
 }
