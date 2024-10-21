@@ -14,4 +14,17 @@ observadores quando seu estado muda.
 -> Objetos observadores (Observer) devem ter meios de receber notificação de 
 seus Observáveis. Geralmente isto é feito com apenas um método.
 
+Aplicabilidade;
 
+-> Você precisa notificar vários objetos sobre a mudança de estado de outro(s)
+objeto(s).
+
+Benefícios;
+
+-> SRP and OCP.
+-> Facilita a comunicação entre objetos em tempo de execução.
+
+Malefícios;
+
+-> Pode ser complexo ou impossível manter a ordem em que as notificações são 
+enviadas.
