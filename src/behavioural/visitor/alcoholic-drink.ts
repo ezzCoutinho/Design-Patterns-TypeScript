@@ -1,0 +1,7 @@
+import { VisitableProduct } from './visitable-product';
+
+export class AlcoholicDrink extends VisitableProduct {
+  constructor(protected price: number) {
+    super('AlcoholicDrink', price);
+  }
+}
